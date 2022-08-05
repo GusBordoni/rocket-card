@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Prompt:wght@100;400;700&display=swap');
+
+:root {
+    --bg: #0d1115;
+    --bg-card: #0E1218;
+    --text: #F1F1F1;
+    --img-profile: #8257e5;
+    --buttons: #FFF;
+    --border-button: #1A1A1A;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+    color: var(--text);
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg);
+    align-items: center;
+    justify-content: center;
+}
+
+#rocketContainer, #buttonContainer {
+    height: 75%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#buttonContainer {
+    flex-direction: column;
+}
+
+#rocketContainer {
+    
+}
+
+#colorfulContainer {
+    width: 500px;
+    height: 700px;
+    background-color: #8257e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 65px;
+    border: 1px solid white;
+}
+
+#rocketCard {
+    width: 400px;
+    height: 600px;
+    background-color: var(--bg-card);
+    border-radius: 40px;
+    padding: 10px;
+}
+
+.logo {
+    width: 35px;
+}
