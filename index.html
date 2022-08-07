@@ -12,18 +12,30 @@
     <div id="rocketContainer">
         <div id="colorfulContainer">
             <div id="rocketCard">
-                <img src="./assets/logo.svg" alt="" class="logo">
-                <h1>nome</h1>
-                <div>
-                    minor info
+                <div id="card-header">
+                    <div class="logo-top">
+                        <img src="./assets/logo.svg" alt="" class="logo-img">
+                    </div>
+                    <h1 id="loginName"></h1>
                 </div>
-                <img src="./assets/logo.svg" alt="" class="logo">
+                <div id="info-mini-card">
+                    <div class="minor-info"><img src="./assets/followers.svg" alt=""><span id="infoFollowers"></span></div>
+                    <div class="minor-info"><img src="./assets/following.svg" alt=""><span id="infoFollowing"></span></div>
+                    <div class="minor-info"><img src="./assets/repository.svg" alt=""><span id="infoRepo"></span></div>
+                    <div class="minor-info"><img src="./assets/company.svg" alt=""><span id="infoCompany"></span></div>
+                    <div class="minor-info"><img src="./assets/location.svg" alt=""><span id="infoLocation"></span></div>
+                </div>
+                <div id="bottom-title">
+                    <img src="./assets/logo.svg" alt="" class="logo-img">
+                    <span id="bottom-text">ROCKETCARD</span>
+                </div>
+                <img src="" alt="" id="profilePic">
             </div>
         </div>
     </div>
     <div id="buttonContainer">
         <h2>Customizar Rocketcard</h2>
-        <button>Gerar background</button>
+        <button onclick="changeBGColor()">Gerar background</button>
     </div>
 <script src="./main.js"></script>
 </body>

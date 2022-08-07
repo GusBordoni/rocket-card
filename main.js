@@ -1,16 +1,23 @@
 const BASE_URL = 'https://api.github.com/users/';
+const bgContainer = document.getElementById('colorfulContainer');
 
 function getUser() {
     axios.get(`${BASE_URL}GusBordoni`)
     .then(response => {
-        console.log("User: " + response.data.name)
-        console.log("Seguidores: " + response.data.followers)
-        console.log("Seguindo: " + response.data.following)
-        console.log("Local: " + response.data.location)
-        console.log("Empresa: " + response.data.company)
-        console.log("Avatar: " + response.data.avatar_url)
+        loginName.textContent = response.data.login
+        infoFollowers.textContent = response.data.followers + " Seguidores"
+        infoFollowing.textContent = response.data.following + " Seguindo"
+        infoRepo.textContent = response.data.public_repos + " Repositórios"
+        infoLocation.textContent = response.data.location
+        infoCompany.textContent = response.data.company
+        profilePic.src = response.data.avatar_url
     })
     .catch(error => console.error(error))
 }
 
-// getUser()
+getUser()
+
+function changeBGColor() {
+    var randomColor = Math.floor(Math.random()*16777215).toString(16);
+    bgContainer.style.backgroundColor = '#'+randomColor;
+}
