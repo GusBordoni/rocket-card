@@ -52,6 +52,7 @@ body {
     justify-content: center;
     border-radius: 65px;
     border: 1px solid white;
+    transition: background-color .5s;
 }
 
 #rocketCard {
@@ -95,7 +96,7 @@ h2 {
 }
 
 #info-mini-card {
-    background-color: #2b2b2b9c;
+    background-color: #1c1c1c9c;
     padding: 25px;
     border-radius: 25px;
     width: 50%;
@@ -103,6 +104,7 @@ h2 {
     position: absolute;
     left: 7%;
     top: 50%;
+    backdrop-filter: blur(5px);
 }
 
 .minor-info {
@@ -139,6 +141,7 @@ h2 {
     right: -10%;
     z-index: 0;
     width: 80%;
+    transition: border .5s;
 }
 
 button {
