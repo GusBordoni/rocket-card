@@ -1,7 +1,7 @@
 const BASE_URL = 'https://api.github.com/users/';
 const bgContainer = document.getElementById('colorfulContainer');
 const profileBorder = document.getElementById('profilePic');
-
+var vCardsJS = require('vcards-js');
 function getUser() {
     axios.get(`${BASE_URL}GusBordoni`)
     .then(response => {
@@ -22,4 +22,9 @@ function changeBGColor() {
     var randomColor = Math.floor(Math.random()*16777215).toString(16);
     bgContainer.style.backgroundColor = '#'+randomColor;
     profileBorder.style.border = "10px solid #"+randomColor;
+}
+
+function downloadvCard() {
+    console.log('ok')
+    
 }
