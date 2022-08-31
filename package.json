@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "axios": "^0.27.2",
-    "require": "^0.4.4",
-    "vcards-js": "^2.10.0"
+    "require": "^0.4.4"
   }
 }

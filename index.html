@@ -11,32 +11,42 @@
 <body>
     <div id="rocketContainer">
         <div id="colorfulContainer">
-            <div id="rocketCard">
-                <div id="card-header">
-                    <div class="logo-top">
-                        <img src="./assets/logo.svg" alt="" class="logo-img">
+            <div class="popupContainer">
+                <div class="goToGitHub" id="goToGitHub"><p>Check out my GitHub profile</p></div>
+                <div id="rocketCard">
+                    <div id="card-header">
+                        <div class="logo-top">
+                            <img src="./assets/logo.svg" alt="" class="logo-img">
+                        </div>
+                        <a href="" id="loginNameURL" target="_blank"><h1 id="loginName"></h1></a>
                     </div>
-                    <h1 id="loginName"></h1>
+                    <div id="info-mini-card">
+                        <div class="minor-info"><img src="./assets/followers.svg" alt=""><span id="infoFollowers"></span></div>
+                        <div class="minor-info"><img src="./assets/following.svg" alt=""><span id="infoFollowing"></span></div>
+                        <div class="minor-info"><img src="./assets/repository.svg" alt=""><span id="infoRepo"></span></div>
+                        <div class="minor-info"><img src="./assets/company.svg" alt=""><span id="infoCompany"></span></div>
+                        <div class="minor-info"><img src="./assets/location.svg" alt=""><span id="infoLocation"></span></div>
+                    </div>
+                    <div id="bottom-title">
+                        <img src="./assets/logo.svg" alt="" class="logo-img">
+                        <span id="bottom-text">ROCKETCARD</span>
+                    </div>
+                    <img src="" alt="" id="profilePic">
                 </div>
-                <div id="info-mini-card">
-                    <div class="minor-info"><img src="./assets/followers.svg" alt=""><span id="infoFollowers"></span></div>
-                    <div class="minor-info"><img src="./assets/following.svg" alt=""><span id="infoFollowing"></span></div>
-                    <div class="minor-info"><img src="./assets/repository.svg" alt=""><span id="infoRepo"></span></div>
-                    <div class="minor-info"><img src="./assets/company.svg" alt=""><span id="infoCompany"></span></div>
-                    <div class="minor-info"><img src="./assets/location.svg" alt=""><span id="infoLocation"></span></div>
-                </div>
-                <div id="bottom-title">
-                    <img src="./assets/logo.svg" alt="" class="logo-img">
-                    <span id="bottom-text">ROCKETCARD</span>
-                </div>
-                <img src="" alt="" id="profilePic">
             </div>
         </div>
     </div>
+
     <div id="buttonContainer">
+        
         <h2>Customizar Rocketcard</h2>
-        <button onclick="changeBGColor()">Gerar background</button>
-        <button onclick="downloadvCard()">Download do card</button>
+        <form class="getNewUserForm">
+            <input type="text" name="userLogin" id="userLogin" placeholder="Procurar usuário" required>
+            <input type="button" id="searchUser" onclick="getNewUser()" value="Buscar">
+        </form>
+        <button onclick="changeBGColor()">Nova cor de fundo</button>
+        <button onclick="downloadInfo()">Download das informações</button>
+        <a href="" download="" id="downloadLink"></a>
     </div>
 <script src="./main.js"></script>
 </body>

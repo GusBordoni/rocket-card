@@ -2,6 +2,7 @@
 
 :root {
     --bg: #0d1115;
+    --bg-button: #020508;
     --bg-card: #0E1218;
     --text: #F1F1F1;
     --img-profile: #8257e5;
@@ -91,6 +92,65 @@ body {
     width: 30px;
 }
 
+#loginNameURL {
+    text-decoration: none;
+    color: var(--text);
+}
+
+#loginName:hover {
+    color: var(--img-profile);
+}
+
+.popupContainer {
+    width: 500px;
+    height: 700px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 65px;
+    border: 1px solid white;
+    transition: background-color .5s;
+}
+
+.goToGitHub{
+    position: relative;
+    top: -47%;
+    left: 42%;
+    width: 0;
+    height: 0;
+    z-index: 5;
+    text-align: center;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s, display 1s 1s;
+}
+
+.goToGitHub> p {
+    width: 250px;
+    background-color: var(--img-profile);
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px var(--bg-button);
+    padding: 5px;
+}
+
+.goToGitHub> p::after {
+    content: "";
+    height: 35px;
+    position: absolute;
+    margin-left: -192px;
+    margin-top: 28px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: var(--img-profile) transparent transparent transparent;
+}
+
+.goToGitHub.show {
+    display: unset;
+    opacity: 1;
+    transition: opacity .5s, display 1s 1s;
+}
+
 h2 {
     text-align: center;
 }
@@ -145,23 +205,74 @@ h2 {
 }
 
 button {
-    background-color: black;
+    background-color: var(--bg-button);
     border: 1px solid var(--border-button);
     border-radius: 10px;
     padding: 10px 30px;
-    color: white;
+    color: var(--text);
     margin: 20px 0;
     font-size: 1.05em;
+    width: 282px;
 }
 
 button:hover {
     transform: translate(-2px, -2px);
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.596);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 button:active {
     transform: translate(-1px, -1px);
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.596);
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+}
+
+.getNewUserForm {
+    display: flex;
+    /* flex-direction: column; */
+    padding: 25px 0 20px 0;
+    align-items: center;
+}
+
+#downloadLink {
+    display: none;
+}
+
+#userLogin {
+    background-color: var(--bg-button);
+    border: 1px solid transparent;
+    border-radius: 10px 0 0 10px;
+    padding: 10px 30px;
+    color: var(--text);
+    font-size: 1.05em;
+    width: 182px;
+}
+
+#userLogin::placeholder {
+    font-size: .75em;
+}
+
+#userLogin:focus-within {
+    border: 1px solid var(--border-button);
+    outline: 1px solid var(--border-button);
+}
+
+#searchUser {
+    width: 100px;
+    border-radius: 0 10px 10px 0;
+    padding: 11px;
+    background-color: var(--bg-button);
+    border: 1px solid var(--border-button);
+    height: 49px;
+}
+
+#searchUser:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--img-profile);
+}
+
+#searchUser:active {
+    transform: translate(0, 0);
+    background-color: var(--img-profile);
 }
 
 @media only screen and (max-width: 1024px) {
