@@ -109,7 +109,6 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 65px;
-    border: 1px solid white;
     transition: background-color .5s;
 }
 
@@ -121,9 +120,8 @@ body {
     height: 0;
     z-index: 5;
     text-align: center;
-    display: none;
     opacity: 0;
-    transition: opacity .5s, display 1s 1s;
+    transition: opacity .3s;
 }
 
 .goToGitHub> p {
@@ -146,9 +144,8 @@ body {
 }
 
 .goToGitHub.show {
-    display: unset;
     opacity: 1;
-    transition: opacity .5s, display 1s 1s;
+    transition: opacity .3s;
 }
 
 h2 {
@@ -165,12 +162,36 @@ h2 {
     left: 7%;
     top: 50%;
     backdrop-filter: blur(5px);
+    border: 1px solid transparent;
 }
+
+#info-mini-card:hover {
+    animation: glow 2s ease-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+		border-color: #8257e5;
+		box-shadow: 0 0 5px rgba(98, 0, 255, 0.849), inset 0 0 5px rgba(98, 0, 255, 0.1), 0 2px 0 #000;
+    }	
+    100% {
+		border-color: #a17bf8;
+		box-shadow: 0 0 20px rgba(114, 26, 255, 0.6), inset 0 0 10px rgba(157, 96, 255, 0.4), 0 2px 0 #000;
+    }
+}
+
 
 .minor-info {
     display: flex;
     margin-top: 8px;
     gap: 5px;
+    color: var(--text);
+    transition: color .3s;
+}
+
+.minor-info > span:hover {
+    color: #9771ee;
+    transition: color .3s;
 }
 
 #bottom-title {
@@ -225,6 +246,11 @@ button:active {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
 }
 
+button:focus {
+    border: 1px solid var(--img-profile);
+    outline: none;
+}
+
 .getNewUserForm {
     display: flex;
     /* flex-direction: column; */
@@ -275,6 +301,15 @@ button:active {
     background-color: var(--img-profile);
 }
 
+#searchUser:focus {
+    border: 1px solid var(--img-profile);
+    outline: none;
+}
+
+#validate {
+    display: none;
+}
+
 @media only screen and (max-width: 1024px) {
     body {
         justify-content: space-around;
@@ -295,4 +330,18 @@ button:active {
     #rocketCard {
         min-width: 288px;
     }
+}
+
+
+.redwindow {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    opacity: 0.1;
+    transition: 1s;
+}
+
+.redwindow.show {
+    opacity: 1;
+    transition: 1s;
 }

@@ -41,8 +41,8 @@
         
         <h2>Customizar Rocketcard</h2>
         <form class="getNewUserForm">
-            <input type="text" name="userLogin" id="userLogin" placeholder="Procurar usuário" required>
-            <input type="button" id="searchUser" onclick="getNewUser()" value="Buscar">
+            <input type="text" name="userLogin" id="userLogin" placeholder="Procurar usuário" required oninvalid="this.setCustomValidity('Digite um nome de usuário do GitHub para exibir no card! Campo obrigatório!')"/>
+            <input type="button" onclick="getNewUser()" id="searchUser" value="Buscar"/>
         </form>
         <button onclick="changeBGColor()">Nova cor de fundo</button>
         <button onclick="downloadInfo()">Download das informações</button>

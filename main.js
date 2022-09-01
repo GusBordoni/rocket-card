@@ -4,7 +4,10 @@ const profileBorder = document.getElementById('profilePic');
 const newLink = document.getElementById('downloadLink');
 const userLogin = document.getElementById("userLogin");
 const userTitle = document.getElementById('loginName');
+const userTitleA = document.getElementById('loginNameURL');
 const popupInfo = document.getElementById('goToGitHub');
+const form = document.getElementById('getNewUserForm');
+const searchButton = document.getElementById('searchUser');
 
 function getUser(user) {
     axios.get(`${BASE_URL}${user}`)
@@ -29,8 +32,10 @@ function getUser(user) {
 getUser('GusBordoni')
 
 function getNewUser(user) {
-    user = document.getElementById('userLogin').value
-    getUser(user)
+    if(userLogin.value != ""){
+        user = userLogin.value
+        getUser(user)
+    } 
 }
 
 function changeBGColor() {
@@ -66,13 +71,9 @@ userLogin.addEventListener("keypress", function(event) {
   }
 }); 
 
-loginName.addEventListener("mouseenter", async function(event){
+userTitleA.addEventListener("mouseenter", async function(event){
     popupInfo.classList.add('show')
-    setTimeout(() => {
-        console.log('ok')
-        popupInfo.classList.remove('show')
-    }, 1500);
 })
-
-// colocar o mouse over no "card-header"
-// procurar um exercicio que eu fiz (provavelmente o countdown) pra adicionar animação de fadein/out na popup
+userTitleA.addEventListener("mouseleave", async function(event){
+    popupInfo.classList.remove('show')
+})
