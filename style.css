@@ -189,6 +189,11 @@ h2 {
     transition: color .3s;
 }
 
+.minor-info > span {
+    color: var(--text);
+    transition: color .3s;
+}
+
 .minor-info > span:hover {
     color: #9771ee;
     transition: color .3s;
